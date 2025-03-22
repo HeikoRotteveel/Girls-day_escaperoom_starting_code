@@ -56,7 +56,7 @@ let snelheid = 0
 snelheid = 30
 // Pas snelheid aan indien nodig
 basic.forever(function () {
-    if (maqueen.Ultrasonic() < 12) {
+    if (maqueen.Ultrasonic() < 8) {
         Rechts = Math.randomBoolean()
         if (Rechts) {
             sla_rechtsaf()
