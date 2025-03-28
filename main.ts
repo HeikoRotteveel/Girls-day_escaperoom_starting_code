@@ -5,6 +5,9 @@ function rij_rechtdoor () {
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, snelheid)
     basic.pause(10)
 }
+input.onButtonPressed(Button.AB, function () {
+    input.calibrateCompass()
+})
 // Helperfunctie om te checken of we dichtbij de doelhoek zijn
 function hoek_bereikt (target: number) {
     huidigeHoek = input.compassHeading()
@@ -56,7 +59,7 @@ let snelheid = 0
 snelheid = 30
 // Pas snelheid aan indien nodig
 basic.forever(function () {
-    if (maqueen.Ultrasonic() < 8) {
+    if (maqueen.Ultrasonic() < 10) {
         Rechts = Math.randomBoolean()
         if (Rechts) {
             sla_rechtsaf()
