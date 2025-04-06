@@ -21,7 +21,7 @@ function hoek_bereikt (target: number) {
     verschil = Math.abs(target - huidigeHoek)
     // Controleer of het verschil klein genoeg is (bijv. minder dan 5 graden),
     // of dat we net over de 0° heen zijn (bijv. 358° vs. 2°)
-    return verschil < 5 || verschil > 355
+    return verschil < 15 || verschil > 345
 }
 // Functie om het autootje 90 graden naar rechts te laten draaien
 function sla_rechtsaf () {
